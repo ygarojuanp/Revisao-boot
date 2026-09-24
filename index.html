@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Bootstrap Class - Geração Tech 4.0</title>
+    <style>
+        /* Toggle do tema fixado no canto inferior direito */
+        #themeToggle {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Meu Dashboard</h1>
+        <p>Gerencie suas informações</p>
+        <div>Você possui novas notificações</div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <h5>Perfil</h5>
+                        <p>Gerencie seus dados pessoais</p>
+                        <button>Acessar</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <h5>Relatórios</h5>
+                        <p>Consulte seus resultados</p>
+                        <button>Visualizar</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <h5>Configurações</h5>
+                        <p>Personalize sua conta</p>
+                        <button>Configurar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Contato</h2>
+        <div>
+            <div>
+                <form>
+                    <div>
+                        <label>Nome</label>
+                        <input>
+                    </div>
+                    <div>
+                        <label>E-mail</label>
+                        <input>
+                    </div>
+                    <div>
+                        <label>Mensagem</label>
+                        <textarea></textarea>
+                    </div>
+                    <button>Enviar</button>
+                </form>
+            </div>
+            <div>
+                <h3>Status dos canais de atendimento</h3>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Canal</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WhatsApp</td>
+                                <td><span>Online</span></td>
+                            </tr>
+                            <tr>
+                                <td>E-mail</td>
+                                <td><span>Em análise</span></td>
+                            </tr>
+                            <tr>
+                                <td>Suporte</td>
+                                <td><span>Agendado</span></td>
+                            </tr>
+                            <tr>
+                                <td>Atendimento</td>
+                                <td><span>Indisponível</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <h3>Redes sociais</h3>
+        <div>
+            <a 
+                href="https://github.com/carloeira" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                GitHub
+            </a>
+            <a 
+                href="https://linkedin.com/in/carloeira" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                LinkedIn
+            </a>
+            <a 
+                href="https://instagram.com/ielceara" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                Instagram
+            </a>
+        </div>
+    </div>
+
+    <button 
+        id="themeToggle" 
+        class="btn btn-outline-success ms-2" 
+        type="button">
+    </button>
+
+    <script>
+        const themeToggle = document.getElementById("themeToggle");
+
+        // Verifica se existe um tema salvo
+        let theme = localStorage.getItem("theme");
+
+        // Se não existir, usa o tema preferido como claro
+        if (!theme) {
+            theme = window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "dark"
+                : "light";
+        }
+
+        // Função para aplicar o tema
+        function applyTheme() {
+            document.documentElement.setAttribute("data-bs-theme", theme);
+
+            if (theme === "dark") {
+                themeToggle.textContent = "🌙";
+            } else {
+                themeToggle.textContent = "☀️";
+            }
+        }
+
+        // Aplica o tema ao abrir a página
+        applyTheme();
+
+        // Troca o tema ao clicar
+        themeToggle.addEventListener("click", () => {
+            theme = theme === "light" ? "dark" : "light";
+
+            localStorage.setItem("theme", theme);
+
+            applyTheme();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
