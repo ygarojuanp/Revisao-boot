@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>Bootstrap Class - Geração Tech 4.0</title>
     <style>
         /* Toggle do tema fixado no canto inferior direito */
@@ -14,47 +17,50 @@
             bottom: 20px;
             right: 15px;
             z-index: 1000;
-        
+
         }
-        h1{
+
+        h1 {
             font-family: "bebas neue", sans-serif;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="container">
     <div class="my-4">
-        <h1 class="mt-4">Meu Dashboard</h1>
-        <p>Gerencie suas informações</p>
-        <div>Você possui novas notificações</div>
-        <div>
-            <div>
-                <div>
-                    <div>
-                        <h5>Perfil</h5>
-                        <p>Gerencie seus dados pessoais</p>
-                        <button>Acessar</button>
+        <h1 class="mt-4"><i class="fa-solid fa-display"></i>Meu Dashboard</h1>
+        <p class="lead">Gerencie suas informações</p>
+        <div class="alert alert-info"><i class="fa-solid fa-info"></i>Você possui novas notificações</div>
+        <div class="row g-4 mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user"></i>Perfil</h5>
+                        <p class="card-text">Gerencie seus dados pessoais</p>
+                        <button class="btn btn-primary"><i class="fas fa-arrow-right"></i>Acessar</button>
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <div>
-                        <h5>Relatórios</h5>
-                        <p>Consulte seus resultados</p>
-                        <button>Visualizar</button>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-chart-line"></i>
+Relatórios</h5>
+                        <p class="card-text">Consulte seus resultados</p>
+                        <button class="btn btn-outline-success"><i class="fas fa-arrow-right"></i>Visualizar</button>
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <div>
-                        <h5>Configurações</h5>
-                        <p>Personalize sua conta</p>
-                        <button>Configurar</button>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-gear"></i>
+Configurações</h5>
+                        <p class="card-text">Personalize sua conta</p>
+                        <button class="btn btn-danger"><i class="fas fa-arrow-right"></i>Configurar</button>
                     </div>
                 </div>
             </div>
@@ -112,31 +118,19 @@
         </div>
         <h3>Redes sociais</h3>
         <div>
-            <a 
-                href="https://github.com/carloeira" 
-                target="_blank" 
-                rel="noopener noreferrer">
+            <a href="https://github.com/carloeira" target="_blank" rel="noopener noreferrer">
                 GitHub
             </a>
-            <a 
-                href="https://linkedin.com/in/carloeira" 
-                target="_blank" 
-                rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/carloeira" target="_blank" rel="noopener noreferrer">
                 LinkedIn
             </a>
-            <a 
-                href="https://instagram.com/ielceara" 
-                target="_blank" 
-                rel="noopener noreferrer">
+            <a href="https://instagram.com/ielceara" target="_blank" rel="noopener noreferrer">
                 Instagram
             </a>
         </div>
     </div>
 
-    <button 
-        id="themeToggle" 
-        class="btn btn-outline-success ms-2" 
-        type="button">
+    <button id="themeToggle" class="btn btn-outline-success ms-2" type="button">
     </button>
 
     <script>
@@ -180,4 +174,5 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
